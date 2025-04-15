@@ -46,8 +46,18 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Please enter a value", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                double input;
 
-                double input = Double.parseDouble(inputStr);
+                try {
+                    input = Double.parseDouble(inputStr);
+                    if (input <= 0) {
+                        Toast.makeText(MainActivity.this, "Please enter a positive number", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                } catch (NumberFormatException e) {
+                    Toast.makeText(MainActivity.this, "Invalid input. Please enter a valid number.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 String fromUnit = sourceUnit.getSelectedItem().toString();
                 String toUnit = targetUnit.getSelectedItem().toString();
                 double result = convertUnits(input, fromUnit, toUnit);
