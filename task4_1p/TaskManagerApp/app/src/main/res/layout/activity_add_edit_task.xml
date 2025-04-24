@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textTitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task Title"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textTitleLabel"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/textDescriptionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="18sp"
+        android:layout_below="@id/editTextTitle"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textDescriptionLabel"
+        android:inputType="textMultiLine"/>
+
+    <TextView
+        android:id="@+id/textDueDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Due Date (YYYY-MM-DD)"
+        android:textSize="18sp"
+        android:layout_below="@id/editTextDescription"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextDueDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textDueDateLabel"
+        android:inputType="none"
+        android:focusable="false"
+        android:clickable="true"
+        android:hint="Select Due Date"/>
+
+    <Button
+        android:id="@+id/buttonSaveTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Task"
+        android:layout_below="@id/editTextDueDate"
+        android:layout_marginTop="24dp"/>
+
+    <Button
+        android:id="@+id/buttonDeleteTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete Task"
+        android:layout_below="@id/buttonSaveTask"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"/>
+</RelativeLayout>
