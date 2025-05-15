@@ -215,7 +215,7 @@ public class NewsDetailFragment extends Fragment {
         description.setText(newsItem.getDescription());
 
         List<NewsItem> relatedNews = new ArrayList<>();
-        relatedNews.add(new NewsItem("Tech: AI's Impact on Daily Life", "AI is changing how we work and live...", R.drawable.news2));
+        relatedNews.add(new NewsItem("Tech: New Technological Impact on Daily Life", "New inventions are changing how we work and live...", R.drawable.news2));
         relatedNews.add(new NewsItem("Health: Mental Wellness Tips", "Learn how to manage stress in 2025...", R.drawable.news4));
         relatedNews.add(new NewsItem("Travel: Backpacking in Europe", "Affordable travel routes for students...", R.drawable.news5));
 
